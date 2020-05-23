@@ -25,7 +25,7 @@ rule `sit down on bed`
 rule `stand`
      `player sitting down on bed`
      `You stands up bed.`
-     `player not sitting, player not sitting down on bed`
+     `player not sitting`
      
 rule `stand`
      `player stands`
