@@ -51,7 +51,7 @@ Reum use facts, like Prolog. `Facts` is `Set()` of strings. `now` adds or remove
 ```js
 now `book is on the table, book not open`
 ```
-Word `not` is fact's text makes the sentence negative, and removes `book open`-fact from `Facts`.
+Word `not` makes the sentence negative, and Reum removes `book open`-fact from `Facts`.
 
 In the real world, some facts may lead to the disclosure of other facts. The real world is full of relationships between objects. Reum has a way to describe this relationship.
 
