@@ -1,5 +1,5 @@
 # reum
-Reum is language-independent,parser IF engine.
+Reum is language-independent parser Interactive Fiction engine.
 
 # Synopsys
 ```js
