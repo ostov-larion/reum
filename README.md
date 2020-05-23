@@ -1,10 +1,9 @@
 # reum
-Reum is parser IF engine.
+Reum is language-independent,parser IF engine.
 
 # Synopsys
 ```js
-let {grammar, now, title, say, unless, rule,start} = require('reum')
-grammar.not = 'not'
+let {now, title, say, unless, rule,start} = require('reum')
 
 now `player are in Test Room, player stands`
 title `Test Room`
