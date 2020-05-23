@@ -9,7 +9,7 @@ now `player are in Test Room, player stands`
 title `Test Room`
 say `You are in Test Room`
 rule `sit down on bed`
-     `player stands`
+     `player stands, player are in Test Room`
      `You sat down on the bed. This bed is very comfortable.`
      `player not stands, player sitting down on bed, player sitting`
      
