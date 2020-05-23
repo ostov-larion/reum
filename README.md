@@ -58,7 +58,7 @@ Word `not` makes the sentence negative, and Reum removes `book open`-fact from `
 In the real world, some facts may lead to the disclosure of other facts. The real world is full of relationships between objects. Reum has a way to describe this relationship.
 
 ```js
-opposite `open` `close`
+antonyms `open` `close`
 ```
 If something is open, it is'nt close, and vice versa, if something is close, it is'nt open.
 
@@ -72,6 +72,6 @@ Rules implements Event-Condition-Action pattern for game code design.
 rule `open book`             // Event
      `book is close`         // Conditions
                              // Actions
-     `You are opened book!`  // | String, which printed
+     `You are opened book!`  // | String, which will be printed
      `book is open`          // | New facts
 ```
