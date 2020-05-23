@@ -70,6 +70,6 @@ Rules implements Event-Condition-Action pattern for game code design.
 rule `open book`             // Event
      `book is close`         // Conditions
                              // Actions
-     `You are opened book!`  // | (string, which printed)
+     `You are opened book!`  // | String, which printed
      `book is open`          // | New facts
 ```
