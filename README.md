@@ -3,16 +3,16 @@ Reum is language-independent parser Interactive Fiction engine.
 
 # Synopsys
 ```js
-let {now, title, say, unless, rule,start} = require('reum')
+let {now, title, say, synonyms, antonyms, rule,start} = require('reum')
 
 now `player are in Test Room, player stands`
 title `Test Room`
 say `You are in Test Room. Here is bed.`
 
-unless `player sitting on .+`
-       `player sitting`
+synonyms `sitting on something`
+         `sitting`
        
-opposite `sitting` `stands`
+antonyms `sitting` `stands`
 
 rule `sit down on bed`
      `player stands, player are in Test Room`
