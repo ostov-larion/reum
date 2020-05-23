@@ -10,7 +10,9 @@ title `Test Room`
 say `You are in Test Room. Here is bed.`
 
 unless `player sitting on .+`
-       `player sitting, player not stands`
+       `player sitting`
+       
+opposite `sitting` `stands`
 
 rule `sit down on bed`
      `player stands, player are in Test Room`
