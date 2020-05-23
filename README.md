@@ -36,9 +36,9 @@ rule `stand`
 ```
 
 # DSL
-Reum uses simple embedded DSL.
+Reum uses small embedded DSL.
 ```js
-rule `event` `conditions` `text when condintions are met` `new facts`
+rule `event` `conditions` `print this text, if condintions are met` `new facts, if conditions are met.`
 now `new facts`
 implement `action`
 unless `facts` `then facts`
@@ -57,4 +57,19 @@ In the real world, some facts may lead to the disclosure of other facts. The rea
 ```js
 unless `open`
        `not close`
+```
+If something is open, it is'nt close, and vice versa, if something is close, it is'nt open.
+
+# Actions
+Action is string, which is entered by the player and triggers event.
+implement `open book`
+
+# Rules
+Rules implements Event-Condition-Action pattern for game code design.
+```js
+rule `open book`             // Event
+     `book is close`         // Conditions
+                             // Actions
+     `You are opened book!`  // | (string, which printed)
+     `book is open`          // | New facts
 ```
