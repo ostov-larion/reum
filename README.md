@@ -3,7 +3,8 @@ Reum is parser IF engine.
 
 # Synopsys
 ```js
-global.not = 'not'
+let {grammar, now, title, say, unless, rule,start} = require('reum')
+grammar.not = 'not'
 
 now `player are in Test Room, player stands`
 title `Test Room`
@@ -32,7 +33,7 @@ rule `stand`
      `You already stands!`
      ``
      
-
+start()
 ```
 
 # DSL
