@@ -43,6 +43,7 @@ rule `event` `conditions` `print this text, if condintions are met` `new facts, 
 now `new facts`
 implement `action`
 unless `facts` `then facts`
+opposite `antonym #1` `antonym #2`
 ```
 
 # Facts
@@ -56,8 +57,7 @@ Word `not` makes the sentence negative, and Reum removes `book open`-fact from `
 In the real world, some facts may lead to the disclosure of other facts. The real world is full of relationships between objects. Reum has a way to describe this relationship.
 
 ```js
-unless `open`
-       `not close`
+opposite `open` `close`
 ```
 If something is open, it is'nt close, and vice versa, if something is close, it is'nt open.
 
