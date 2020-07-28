@@ -5,12 +5,19 @@ const rl = readline.createInterface({
 });
 
 // * Printing Functions
-say    = ([string]) => console.log('|',string) || true
-title  = ([string]) => console.log("| \x1b[47m\x1b[30m %s \x1b[0m",string) || true
-dialog = string => console.log("- \x1b[36m%s\x1b[0m",string) || true
-help   = string => console.log("? \x1b[33m%s\x1b[0m",string) || true
-error  = string => console.log("! \x1b[31m%s\x1b[0m",string) || true
-list   = array  => array.map(e => console.log('*',e.name))
+header  = ([string]) => `| \x1b[47m\x1b[30m${string}\x1b[0m`
+say = (strings,...data) =>
+	console.log(
+		strings.map( (e,i) =>(
+			(e && e[0]!='\n'?'| ':'') +
+			(!/^\n(\t)+$/.test(e)?e.replace(/(\n((\t|\s)+))/g,'\n| '):'\n') + (data[i]?data[i]:'')
+		))
+		.join('') + '\n|'
+	) || true
+
+dialog = ([string]) => `- \x1b[36m${string}\x1b[0m`
+help   = ([string]) => `? \x1b[33m${string}\x1b[0m`
+error  = ([string]) => `! \x1b[31m${string}\x1b[0m`
 
 // * Register
 Rules = []
@@ -56,6 +63,7 @@ afterEffect = (fn1,fn2) => new Proxy(fn1,{apply: (t,ctx,args) => (t.apply(ctx,ar
 // * Helpers
 splitComma = str => str.split(',').map(e => e.trim())
 from = from => ({to: fn => fn(from)})
+title = ([string]) => process.title = string
 
 // * DSL
 rule = ([event]) => ([conds]) => ([action]) => ([postconds]) => Rules.push({event: new RegExp(event.trim()), conds: splitComma(conds), action, postconds})
@@ -98,4 +106,22 @@ function start(){
 	});
 }
 
-module.exports = {prompt,start,rule,implement,now,synonyms,antonyms,say,error,help,title,dialog,error,list,Facts,Rules,grammar}
+module.exports = {
+	prompt,
+	start,
+	rule,
+	implement,
+	now,
+	synonyms,
+	antonyms,
+	say,
+	error,
+	help,
+	title,
+	header,
+	dialog,
+	error,
+	Facts,
+	Rules,
+	grammar
+}
