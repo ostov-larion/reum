@@ -43,8 +43,7 @@ Reum uses small embedded DSL.
 rule `event` `conditions` `print this text, if condintions are met` `new facts, if conditions are met.`
 now `new facts`
 implement `action`
-unless `facts` `then facts`
-opposite `antonym #1` `antonym #2`
+antonyms `antonym #1` `antonym #2`
 ```
 
 # Facts
